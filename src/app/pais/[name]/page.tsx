@@ -1,23 +1,24 @@
 import CountryCard from "@/app/componentes/country-card";
-import { Country } from "@/app/page";
+import { CountryN } from "@/app/page";
+
 import Image from "next/image";
 import Link from "next/link";
 
 
 
-async function getCountryByName(name: string): Promise<Country>{
+async function getCountryByName(name: string): Promise<CountryN>{
 const response = await fetch('https://restcountries.com/v3.1/all');
-const countries: Country[] = await response.json();
+const countries: CountryN[] = await response.json();
 
-return countries.find((country: Country)=> country.name.common === name)!;
+return countries.find((country: CountryN)=> country.name.common === name)!;
 
 }
 
 async function getCountryBordersByName(name: string){
     const response = await fetch('https://restcountries.com/v3.1/all');
-    const countries: Country[] = await response.json();
+    const countries: CountryN[] = await response.json();
     
-    const country = countries.find((country: Country)=> country.name.common === name)!;
+    const country = countries.find((country: CountryN)=> country.name.common === name)!;
 
     return   country.borders?.map((border)=> {
 

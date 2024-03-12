@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+
 import CountryCard from "./componentes/country-card";
 
-export type Country = {
+export type CountryN = {
     name: {
         common: string;
     },
@@ -35,7 +34,7 @@ export type Country = {
    
 }
 
-async function getCountries(): Promise<Country[]>{
+async function getCountries(): Promise<CountryN[]>{
 
     const response = await fetch('https://restcountries.com/v3.1/all');
     return response.json();
