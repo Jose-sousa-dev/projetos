@@ -104,7 +104,7 @@ export default async function Country({params: {name}}:{params: {name: string}})
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lx:grid-cols-5 gap-3 w-full my-3 ">
                 {borderCountries?.map((border)=> 
-                  <CountryCard {...border} /> )}
+                  <CountryCard key={border.name}{...border} /> )}
             </div>
 
         </section>
