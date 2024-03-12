@@ -1,4 +1,3 @@
-
 import CountryCard from "@/app/componentes/country-card";
 import { Country } from "@/app/page";
 import Image from "next/image";
