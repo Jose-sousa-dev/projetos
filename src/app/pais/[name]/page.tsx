@@ -76,7 +76,6 @@ export default async function Country({params: {name}}:{params: {name: string}})
 
                 )}
 
-
                 {country.languages && (
 
                 <h2 className="text-xl text-gray-800">
