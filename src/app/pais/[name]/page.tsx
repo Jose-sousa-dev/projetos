@@ -19,7 +19,7 @@ async function getCountryBordersByName(name: string){
     
     const country = countries.find((country: Country)=> country.name.common === name)!;
 
-      return country.borders?.map((border)=> {
+    return   country.borders?.map((border)=> {
 
         const borderCountry = countries.find(country => country.cca3 === border)!
         return {
